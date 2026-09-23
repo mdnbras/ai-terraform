@@ -1,0 +1,10 @@
+{
+  "name": "ai-terraform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node tools/validate-package.mjs",
+    "quality": "node .kiro/specialists/ai-terraform/tools/run-terraform-quality.mjs"
+  }
+}

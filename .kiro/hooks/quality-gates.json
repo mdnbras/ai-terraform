@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Terraform task readiness",
+      "trigger": "PreTaskExecution",
+      "action": { "type": "agent", "prompt": "Confirme root/module, versões, providers, backend, workspace, ambiente e blast radius. Nunca execute apply, destroy, import ou state mutation sem aprovação explícita." }
+    },
+    {
+      "name": "Terraform quality after task",
+      "trigger": "PostTaskExecution",
+      "action": { "type": "command", "command": "node .kiro/specialists/ai-terraform/tools/run-terraform-quality.mjs" },
+      "timeout": 1200
+    }
+  ]
+}

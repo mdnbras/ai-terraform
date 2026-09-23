@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "name": "ai-terraform",
+  "version": "0.1.0",
+  "description": "Pacote de agentes Kiro para módulos, state, segurança, testes e delivery com Terraform.",
+  "entryAgent": "specialists/ai-terraform/orchestrator",
+  "capabilities": ["terraform", "hcl", "iac", "modules", "providers", "state", "policy-as-code", "testing", "plan-review"],
+  "exports": [
+    { "kind": "agents", "source": ".kiro/agents", "target": "agents/specialists/ai-terraform" },
+    { "kind": "skills", "source": ".kiro/skills", "target": "skills" },
+    { "kind": "steering", "source": ".kiro/steering", "target": "steering", "filePrefix": "ai-terraform-" },
+    { "kind": "hooks", "source": ".kiro/hooks", "target": "hooks", "filePrefix": "ai-terraform-" },
+    { "kind": "runtime", "source": ".kiro/specialists/ai-terraform", "target": "specialists/ai-terraform" }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "format": ["fmt", "-check", "-recursive"],
+  "init": ["init", "-backend=false", "-input=false"],
+  "validate": ["validate", "-no-color"],
+  "test": ["test", "-no-color"]
+}
