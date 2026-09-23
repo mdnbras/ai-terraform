@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "Pacote de agentes Kiro para módulos, state, segurança, testes e delivery com Terraform.",
   "entryAgent": "specialists/ai-terraform/orchestrator",
+  "companions": ["ai-aws", "ai-kubernetes"],
   "capabilities": ["terraform", "hcl", "iac", "modules", "providers", "state", "policy-as-code", "testing", "plan-review"],
   "exports": [
     { "kind": "agents", "source": ".kiro/agents", "target": "agents/specialists/ai-terraform" },

@@ -33,3 +33,9 @@ npm run specialist -- install ai-terraform --target C:\MyPath\minha-infra
 
 Por padrão, o quality gate executa `terraform fmt -check -recursive` e `terraform validate` somente quando o diretório já foi inicializado. Testes exigem `AISDLC_TERRAFORM_TEST=1`, pois podem criar infraestrutura real.
 
+## Especialistas companions
+
+- `ai-aws`: define arquitetura, serviços, IAM, rede e critérios Well-Architected; Terraform implementa módulos e recursos.
+- `ai-kubernetes`: define contratos de cluster, add-ons e workloads; Terraform implementa a infraestrutura declarativa correspondente.
+
+Quando os pacotes estão instalados juntos, os orquestradores podem delegar entre si. O especialista de domínio revisa o resultado e o `ai-terraform` permanece responsável por HCL, state, validações e plan.
